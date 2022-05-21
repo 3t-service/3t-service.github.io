@@ -20043,7 +20043,7 @@
 						</div>
 					</div>
 					<div id="results" style="display: none; text-align: center;">
-							<div style="text-align:center"><img id="prodimg" src="https://blackinc.cc/wp-content/uploads/2020/01/BlackIncIntegratedBarstem.jpg" style="width:25%; margin: auto"></div>
+							<div style="text-align:center"><img id="prodimg" src="https://cdn2.vectorstock.com/i/thumb-large/48/06/image-preview-icon-picture-placeholder-vector-31284806.jpg" style="width:25%; margin: auto"></div>
 							<br>
 							<p class="par">Product Name</p>
 							<p id="rname"></p>
@@ -20569,9 +20569,35 @@
 			var tmp = "";
 
 			switch (number.charAt(0)) {
-				case '1': tmp = "Black Inc Integrated Barstem"; break;
-				case '3': tmp = "Black Inc Seat Post"; break;
+				case '1':
+					tmp = "3T Carbon Dropbar";
+					break;
+				case '2': 
+					tmp = "3T ARX LTD Stealth Carbon Stem";
+					document.getElementById("prodimg").src = "https://i.imgur.com/tqgwIgD.png";
+					break;
 				default: badresult = true;
+			}
+			switch (number.charAt(6)) {
+				case '1':
+					tmp += " AEROFLUX LTD Stealth";
+					document.getElementById("prodimg").src = "https://i.imgur.com/KG63flh.png";
+					break;
+				case '2':
+					tmp += " TEAM Black";
+					document.getElementById("prodimg").src = "";
+					break;
+				case '3':
+					tmp += " TEAM Red";
+					document.getElementById("prodimg").src = "";
+					break;
+				case '4':
+					break;
+				case '5':
+					break;
+				default:
+					badresult = true;
+					break;
 			}
 			document.getElementById("rname").innerHTML = tmp;
 			console.log("0 " + tmp + " bad " + badresult);
@@ -20582,24 +20608,18 @@
 				case '4': tmp = "440mm"; break;
 				case '5': tmp = "27.2mm x 350mm, "; break;
 				case '6': tmp = "31.6mm x 350mm, "; break;
+				case '7': tmp = ""; break;
 				default: badresult = true;
 			}
 			console.log("1 " + tmp + " bad " + badresult);
 
 			switch (number.charAt(2)) {
-				case '1': tmp += " x 80mm"; break;
-				case '2': tmp += " x 90mm"; break;
-				case '3': tmp += " x 100mm"; break;
-				case '4': tmp += " x 110mm"; break;
-				case '5': tmp += " x 120mm"; break;
-				case '6': 
-					tmp += " 25mm Layback"; 
-					document.getElementById("prodimg").src = "https://www.bikeinn.com/f/13759/137594579/black-inc-0-offset-seatpost.jpg";
-					break;
-				case '7':
-				tmp += " 0mm Layback";
-					document.getElementById("prodimg").src = "https://www.bikeinn.com/f/13759/137594579_4/black-inc-0-offset-seatpost.jpg";
-					break;
+				case '1': tmp += "80mm"; break;
+				case '2': tmp += "90mm"; break;
+				case '3': tmp += "100mm"; break;
+				case '4': tmp += "110mm"; break;
+				case '5': tmp += "120mm"; break;
+				case '6': break;
 				default: badresult = true;
 			}
 			document.getElementById("rsize").innerHTML = tmp;
@@ -20609,10 +20629,6 @@
 			document.getElementById("rdate").innerHTML = tmp;
 			console.log("345 " + tmp + " bad " + badresult);
 
-			switch (number.charAt(6)) {
-				case '4': break;
-				default: badresult = true;
-			}
 			console.log("6 bad " + badresult);
 		  
 			var i = 0, count = 0;
